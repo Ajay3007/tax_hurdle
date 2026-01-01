@@ -1,0 +1,55 @@
+spring:
+  application:
+    name: investing-hurdle-api
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50MB
+      max-request-size: 50MB
+  jackson:
+    serialization:
+      indent-output: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+# Swagger/OpenAPI Configuration
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    operations-sorter: method
+    tags-sorter: alpha
+
+# Application Configuration
+investing-hurdle:
+  upload-dir: ./uploads
+  output-dir: ./output
+  default-financial-year: FY 2021-22
+  max-processing-threads: 4
+
+# Logging Configuration
+logging:
+  level:
+    com.investinghurdle: DEBUG
+    org.springframework: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+  file:
+    name: ./logs/api.log
+    max-size: 10MB
+    max-history: 30
+
+# Actuator Configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when-authorized
