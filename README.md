@@ -1,20 +1,23 @@
 # InvestingHurdle - Tax & Capital Gains Calculator
 
-A Java-based application for calculating **Short-Term Capital Gains (STCG)** and **Speculation/Intraday Trading** profit/loss from equity trading data stored in Excel workbooks.
+Java tooling to calculate **STCG**, **LTCG**, and **Speculation/Intraday** results from broker Excel exports. Includes a Spring Boot REST API (with Swagger UI + Excel export) and the original console runner.
 
 ## 📋 Overview
 
-This application processes equity trading data and calculates:
-- **STCG (Short-Term Capital Gains)**: For stocks held less than 1 year
-- **Speculation Income**: For intraday trading activities
-- **Quarterly Breakdown**: Q1-Q5 STCG distribution
-- **Turnover Calculations**: Total turnover for tax purposes
+This project now supports two flows:
+- **Spring API (`spring-api/`)**: Upload broker XLSX, auto-detect mapping (Upstox, Zerodha, etc.), calculate STCG/LTCG/speculation with quarterly breakdowns, and download an Excel summary via `/calculations/export`. Swagger UI is available.
+- **Legacy console (`src/` + `bin/`)**: Original CLI-style runner using the provided configuration workbook.
+
+Key outputs:
+- STCG and LTCG with quarterly breakdowns (default quarter scheme: `STANDARD_Q4`).
+- Speculation (intraday) P&L and turnover (turnover uses abs(P&L)).
+- Broker detection and mapping preview to diagnose column layout.
 
 ## 🏗️ Project Structure
 
 ```
 InvestingHurdle/
-├── src/                          # Source code
+├── src/                          # Legacy console source
 │   ├── bootstrap/
 │   │   └── InvestingHurdleBootstrapper.java    # Main entry point
 │   ├── exception/
@@ -46,6 +49,8 @@ InvestingHurdle/
 ├── bin/                          # Compiled classes (generated)
 ├── .classpath                    # Eclipse/VS Code classpath config
 ├── .project                      # Eclipse project file
+├── spring-api/                   # Spring Boot REST API with Swagger UI and Excel export
+│   └── SETUP.md                  # API setup and run guide
 └── README.md                     # This file
 ```
 
@@ -65,132 +70,52 @@ InvestingHurdle/
 | SparseBitSet | 1.2 | Efficient bit set implementation |
 
 ### Java Requirements
-- **Java Version**: Java 8 or higher
-- **JDK/JRE**: Required for compilation and execution
+- **Java Version**: Java 17+ (API and current build assume 17)
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-1. **Java Development Kit (JDK)** - Version 8+
-   - Download from: https://www.oracle.com/java/technologies/downloads/
-   - Or use OpenJDK: https://adoptium.net/
-
-2. **IDE** (Optional but recommended):
-   - Visual Studio Code with Java Extension Pack
-   - Eclipse IDE
-   - IntelliJ IDEA
+1. **Java Development Kit (JDK)** - Version 17+ (use Adoptium/Temurin or Oracle JDK)
+2. **Maven 3.8+** (for API); IntelliJ can manage Maven if not installed locally
+3. **IDE** (optional): IntelliJ IDEA recommended; VS Code or Eclipse also work
 
 ### Checkout the Project
 
-#### Option 1: Using Git
-
 ```bash
 git clone <repository-url>
-cd TaxHrd/InvestingHurdle
+cd tax_hurdle
 ```
 
-#### Option 2: Download ZIP
+### Running the Spring API (recommended)
 
-1. Download the project ZIP file
-2. Extract to your desired location
-3. Navigate to `InvestingHurdle` directory
-
-### Project Setup
-
-#### For Visual Studio Code
-
-1. **Install Java Extension Pack**:
-   - Open VS Code
-   - Go to Extensions (Ctrl+Shift+X)
-   - Search for "Java Extension Pack"
-   - Install it
-
-2. **Open Project**:
-   ```bash
-   code /path/to/InvestingHurdle
-   ```
-
-3. **Configure Classpath**:
-   - The `.classpath` file is already configured
-   - If you encounter issues, press `Ctrl+Shift+P`
-   - Type `Java: Clean Java Language Server Workspace`
-   - Select `Restart and delete`
-
-4. **Verify Libraries**:
-   - Press `Ctrl+Shift+P`
-   - Type `Java: Configure Classpath`
-   - Ensure all JAR files from `lib/` folder are listed
-
-#### For Eclipse IDE
-
-1. **Import Project**:
-   - File → Open Projects from File System
-   - Select the `InvestingHurdle` directory
-   - Click Finish
-
-2. **Verify Build Path**:
-   - Right-click project → Properties
-   - Java Build Path → Libraries
-   - All JARs from `lib/` should be present
-
-#### For IntelliJ IDEA
-
-1. **Open Project**:
-   - File → Open
-   - Select `InvestingHurdle` directory
-
-2. **Add Libraries**:
-   - File → Project Structure → Libraries
-   - Click `+` → Java
-   - Select all JARs from `lib/` folder
-
-## ▶️ Running the Application
-
-### Method 1: Using VS Code
-
-1. Open [InvestingHurdleBootstrapper.java](src/bootstrap/InvestingHurdleBootstrapper.java)
-2. Right-click in the editor
-3. Select `Run Java`
-
-OR
-
-1. Press `F5` to debug
-2. Select `Java` environment
-
-### Method 2: Command Line (Windows)
-
-```powershell
-cd path\to\InvestingHurdle
-java -cp "bin;lib\*" bootstrap.InvestingHurdleBootstrapper
-```
-
-### Method 3: Command Line (Linux/Mac)
+See [spring-api/SETUP.md](spring-api/SETUP.md) for full steps. Quick start:
 
 ```bash
-cd path/to/InvestingHurdle
-java -cp "bin:lib/*" bootstrap.InvestingHurdleBootstrapper
+cd spring-api
+mvn clean package -DskipTests
+mvn spring-boot:run
+# Swagger UI: http://localhost:8080/swagger-ui/index.html
 ```
 
-### Method 4: Compile and Run from Scratch
+Key endpoints:
+- `POST /calculations/detect-broker` (multipart file) — returns broker type, column mapping, and header preview.
+- `POST /calculations/calculate` — returns JSON with STCG/LTCG/speculation and quarterly breakdowns (quarter scheme defaults to STANDARD_Q4).
+- `POST /calculations/export` — returns an Excel summary with broker info.
 
-**Windows:**
-```powershell
-# Compile
-javac -d bin -cp "lib\*" src\bootstrap\*.java src\params\*.java src\security\*.java src\util\*.java src\exception\*.java src\logging\*.java
+## ▶️ Running the Legacy Console (optional)
 
-# Run
-java -cp "bin;lib\*" bootstrap.InvestingHurdleBootstrapper
-```
+From repo root:
 
-**Linux/Mac:**
 ```bash
-# Compile
+# Compile (if needed)
 javac -d bin -cp "lib/*" src/bootstrap/*.java src/params/*.java src/security/*.java src/util/*.java src/exception/*.java src/logging/*.java
 
 # Run
 java -cp "bin:lib/*" bootstrap.InvestingHurdleBootstrapper
 ```
+
+Uses the Excel at `configuration/tax_2122_.xlsx` and the hardcoded column indices/dates in the legacy loader.
 
 ## 📊 Expected Output
 
@@ -239,44 +164,18 @@ The application reads equity data from Excel files located in the `configuration
   - Column indices are defined in `EquityLoader.java`
   - Row range: START_ROW = 25, END_ROW = 297 (adjustable)
 
-### Changing File Paths
+### Changing File Paths (legacy)
 
-Edit [HurdleConstant.java](src/util/HurdleConstant.java) to modify configuration file paths:
-
-```java
-public static final String CONFIGURATION_FILE_PATH = "./configuration/configuration_stock.xlsx";
-public static final String TAX_CONFIG_FILE_PATH = "./configuration/tax_2122_.xlsx";
-```
+Edit [src/util/HurdleConstant.java](src/util/HurdleConstant.java) to modify legacy configuration file paths.
 
 ## 🐛 Troubleshooting
 
 ### Common Issues
 
-#### 1. Import errors (`org.apache cannot be resolved`)
-
-**Solution**: Ensure all JAR files are properly added to classpath
-- VS Code: Use `Java: Configure Classpath` command
-- Restart Java Language Server: `Java: Clean Java Language Server Workspace`
-
-#### 2. File not found errors
-
-**Solution**: Verify that configuration files exist:
-- `configuration/configuration_stock.xlsx`
-- `configuration/tax_2122_.xlsx`
-
-#### 3. ClassNotFoundException
-
-**Solution**: Compile all source files first
-```bash
-javac -d bin -cp "lib/*" src/**/*.java
-```
-
-#### 4. Excel file format errors
-
-**Solution**: 
-- Ensure Excel files are in `.xlsx` format (not `.xls`)
-- Verify file is not corrupted
-- Check file is not open in Excel while running
+- **Port 8080 in use (API)**: run with `-Dserver.port=9090`.
+- **Java version mismatch**: ensure JDK 17 and `JAVA_HOME` are set.
+- **Upload errors (API)**: send multipart with field name `file`.
+- **Excel format**: use `.xlsx` and ensure the file is not locked by Excel.
 
 ## 📝 Development
 
