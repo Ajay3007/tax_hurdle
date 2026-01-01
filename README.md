@@ -51,6 +51,8 @@ InvestingHurdle/
 ├── .project                      # Eclipse project file
 ├── spring-api/                   # Spring Boot REST API with Swagger UI and Excel export
 │   └── SETUP.md                  # API setup and run guide
+├── javafx-ui/                    # JavaFX Desktop GUI
+│   └── README.md                 # Desktop app setup and run guide
 └── README.md                     # This file
 ```
 
@@ -97,6 +99,18 @@ mvn clean package -DskipTests
 mvn spring-boot:run
 # Swagger UI: http://localhost:8080/swagger-ui/index.html
 ```
+
+### Running the Desktop GUI (optional)
+
+See [javafx-ui/README.md](javafx-ui/README.md) for full steps. Quick start (requires Spring API running):
+
+```bash
+cd javafx-ui
+mvn clean package
+mvn javafx:run
+```
+
+Features: upload Excel files, auto-detect broker, calculate taxes, view results, export to Excel, light/dark theme, configurable settings.
 
 Key endpoints:
 - `POST /calculations/detect-broker` (multipart file) — returns broker type, column mapping, and header preview.

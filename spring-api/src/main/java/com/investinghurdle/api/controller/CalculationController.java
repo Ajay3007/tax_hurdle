@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,8 +18,14 @@ import org.springframework.core.io.ByteArrayResource;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.time.OffsetDateTime;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentLinkedDeque;
+import util.BrokerType;
+import util.QuarterScheme;
 
 /**
  * REST Controller for tax calculation endpoints
@@ -30,6 +37,17 @@ public class CalculationController {
     
     @Autowired
     private TaxCalculationService calculationService;
+
+    private static final int RECENT_LIMIT = 10;
+    private ConcurrentLinkedDeque<Map<String, Object>> recentCalculations = new ConcurrentLinkedDeque<>();
+
+    @Value("${investing-hurdle.upload-dir:./uploads}")
+    private String uploadDir;
+
+    @Value("${investing-hurdle.default-financial-year:FY 2024-25}")
+    private String defaultFinancialYear;
+
+    private static final String DEFAULT_QUARTER_SCHEME = QuarterScheme.STANDARD_Q4.name();
     
     /**
      * Upload Excel workbook and calculate taxes
@@ -53,8 +71,8 @@ public class CalculationController {
             @RequestParam(value = "financial_year", required = true) 
             String financialYear,
             
-            @Parameter(description = "Quarter scheme: Q5_IT_PORTAL or STANDARD_Q4", example = "Q5_IT_PORTAL")
-            @RequestParam(value = "quarter_scheme", required = false, defaultValue = "Q5_IT_PORTAL")
+            @Parameter(description = "Quarter scheme: STANDARD_Q4 or Q5_IT_PORTAL", example = "STANDARD_Q4")
+            @RequestParam(value = "quarter_scheme", required = false, defaultValue = "STANDARD_Q4")
             String quarterScheme) {
         
         try {
@@ -65,6 +83,7 @@ public class CalculationController {
             }
             
             TaxCalculationResponse response = calculationService.calculateFromFile(file, financialYear, quarterScheme);
+            addRecentCalculation(response);
             return ResponseEntity.ok(response);
             
         } catch (IllegalArgumentException e) {
@@ -97,8 +116,8 @@ public class CalculationController {
             @RequestParam(value = "financial_year", required = true)
             String financialYear,
 
-            @Parameter(description = "Quarter scheme: Q5_IT_PORTAL or STANDARD_Q4", example = "Q5_IT_PORTAL")
-            @RequestParam(value = "quarter_scheme", required = false, defaultValue = "Q5_IT_PORTAL")
+            @Parameter(description = "Quarter scheme: STANDARD_Q4 or Q5_IT_PORTAL", example = "STANDARD_Q4")
+            @RequestParam(value = "quarter_scheme", required = false, defaultValue = "STANDARD_Q4")
             String quarterScheme) {
 
         try {
@@ -143,12 +162,31 @@ public class CalculationController {
         
         try {
             TaxCalculationResponse response = calculationService.calculateDefault(financialYear);
+            addRecentCalculation(response);
             return ResponseEntity.ok(response);
             
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(createErrorResponse("Calculation failed: " + e.getMessage()));
         }
+    }
+
+    /**
+     * Get runtime configuration defaults
+     */
+    @GetMapping("/config")
+    @Operation(
+        summary = "Get runtime configuration defaults",
+        description = "Returns default financial year, default quarter scheme, supported quarter schemes, supported brokers, and upload directory"
+    )
+    public ResponseEntity<Map<String, Object>> getRuntimeConfig() {
+        Map<String, Object> response = new HashMap<>();
+        response.put("default_financial_year", defaultFinancialYear);
+        response.put("default_quarter_scheme", DEFAULT_QUARTER_SCHEME);
+        response.put("supported_quarter_schemes", QuarterScheme.values());
+        response.put("supported_brokers", BrokerType.values());
+        response.put("upload_dir", uploadDir);
+        return ResponseEntity.ok(response);
     }
     
     /**
@@ -211,6 +249,41 @@ public class CalculationController {
         response.put("service", "Tax Calculation Service");
         response.put("version", "1.0.0");
         return ResponseEntity.ok(response);
+    }
+
+    /**
+     * Recent calculation summaries (last 10)
+     */
+    @GetMapping("/recent")
+    @Operation(summary = "Recent calculations", description = "Returns last 10 calculation summaries")
+    public ResponseEntity<List<Map<String, Object>>> recentCalculations() {
+        return ResponseEntity.ok(new LinkedList<>(recentCalculations));
+    }
+
+    private void addRecentCalculation(TaxCalculationResponse response) {
+        if (response == null) {
+            return;
+        }
+        Map<String, Object> entry = new HashMap<>();
+        entry.put("financial_year", response.getFinancialYear());
+        entry.put("broker_type", response.getBrokerType());
+        entry.put("broker_name", response.getBrokerName());
+        if (response.getStcg() != null) {
+            entry.put("stcg_total", response.getStcg().getTotalStcg());
+        }
+        if (response.getLtcg() != null) {
+            entry.put("ltcg_total", response.getLtcg().getTotalLtcg());
+        }
+        if (response.getSpeculation() != null) {
+            entry.put("speculation_pl", response.getSpeculation().getProfitLoss());
+        }
+        entry.put("calculated_at", response.getCalculatedAt());
+        entry.put("processing_time_ms", response.getProcessingTimeMs());
+        entry.put("timestamp", OffsetDateTime.now().toString());
+        recentCalculations.addFirst(entry);
+        while (recentCalculations.size() > RECENT_LIMIT) {
+            recentCalculations.removeLast();
+        }
     }
     
     /**

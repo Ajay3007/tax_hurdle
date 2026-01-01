@@ -20,6 +20,7 @@ If Maven is not installed locally
 ## Configuration (optional)
 - `investing-hurdle.upload-dir` (default: `./uploads`)
 - `investing-hurdle.default-financial-year` (default: `FY 2021-22`)
+- `investing-hurdle.api-key` (optional; if set, clients must send header `X-API-Key`)
 - Override via `src/main/resources/application.properties`, environment variables, or JVM flags, e.g.:
 ```bash
 mvn spring-boot:run -Dspring-boot.run.arguments="--investing-hurdle.upload-dir=./uploads"
@@ -37,6 +38,8 @@ java -jar target/spring-api-*.jar
   - `POST /calculations/detect-broker` (multipart file) — verify broker mapping
   - `POST /calculations/calculate` — JSON result
   - `POST /calculations/export` — download Excel summary
+  - `GET /calculations/config` — runtime defaults (default FY, quarter scheme, upload dir, supported brokers)
+  - `GET /calculations/health` — liveness
 
 ## Run via CLI (curl examples)
 Detect broker:

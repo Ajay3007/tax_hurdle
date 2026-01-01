@@ -1,0 +1,237 @@
+2026-01-01T22:46:08.468+05:30  INFO 9740 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Starting InvestingHurdleApiApplication using Java 21.0.2 with PID 9740 (C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle\spring-api\target\classes started by Ajay.Gupt in C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle)
+2026-01-01T22:46:08.470+05:30 DEBUG 9740 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Running with Spring Boot v3.2.1, Spring v6.1.2
+2026-01-01T22:46:08.471+05:30  INFO 9740 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-01-01T22:46:10.968+05:30  INFO 9740 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-01T22:46:10.996+05:30  INFO 9740 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-01T22:46:10.997+05:30  INFO 9740 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-01T22:46:11.083+05:30  INFO 9740 --- [investing-hurdle-api] [main] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring embedded WebApplicationContext
+2026-01-01T22:46:11.083+05:30  INFO 9740 --- [investing-hurdle-api] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2548 ms
+2026-01-01T22:46:11.261+05:30 DEBUG 9740 --- [investing-hurdle-api] [main] c.i.api.security.ApiKeyFilter            : Filter 'apiKeyFilter' configured for use
+2026-01-01T22:46:11.942+05:30  INFO 9740 --- [investing-hurdle-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-01-01T22:46:12.061+05:30  INFO 9740 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-01-01T22:46:12.073+05:30  INFO 9740 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Started InvestingHurdleApiApplication in 4.339 seconds (process running for 5.337)
+2026-01-01T22:46:56.244+05:30  INFO 9740 --- [investing-hurdle-api] [http-nio-8080-exec-2] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-01T22:46:56.245+05:30  INFO 9740 --- [investing-hurdle-api] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-01T22:46:56.246+05:30  INFO 9740 --- [investing-hurdle-api] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-01T22:46:57.050+05:30  INFO 9740 --- [investing-hurdle-api] [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 610 ms
+2026-01-01T22:58:26.840+05:30  INFO 29820 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Starting InvestingHurdleApiApplication using Java 21.0.2 with PID 29820 (C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle\spring-api\target\classes started by Ajay.Gupt in C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle)
+2026-01-01T22:58:26.844+05:30 DEBUG 29820 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Running with Spring Boot v3.2.1, Spring v6.1.2
+2026-01-01T22:58:26.845+05:30  INFO 29820 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-01-01T22:58:28.759+05:30  INFO 29820 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-01T22:58:28.777+05:30  INFO 29820 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-01T22:58:28.778+05:30  INFO 29820 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-01T22:58:28.862+05:30  INFO 29820 --- [investing-hurdle-api] [main] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring embedded WebApplicationContext
+2026-01-01T22:58:28.863+05:30  INFO 29820 --- [investing-hurdle-api] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1944 ms
+2026-01-01T22:58:29.083+05:30 DEBUG 29820 --- [investing-hurdle-api] [main] c.i.api.security.ApiKeyFilter            : Filter 'apiKeyFilter' configured for use
+2026-01-01T22:58:29.760+05:30  INFO 29820 --- [investing-hurdle-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-01-01T22:58:29.879+05:30  INFO 29820 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-01-01T22:58:29.891+05:30  INFO 29820 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Started InvestingHurdleApiApplication in 3.829 seconds (process running for 4.725)
+2026-01-01T23:04:44.162+05:30  INFO 14288 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Starting InvestingHurdleApiApplication using Java 21.0.2 with PID 14288 (C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle\spring-api\target\classes started by Ajay.Gupt in C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle)
+2026-01-01T23:04:44.164+05:30 DEBUG 14288 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Running with Spring Boot v3.2.1, Spring v6.1.2
+2026-01-01T23:04:44.165+05:30  INFO 14288 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-01-01T23:04:46.318+05:30  INFO 14288 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-01T23:04:46.336+05:30  INFO 14288 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-01T23:04:46.336+05:30  INFO 14288 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-01T23:04:46.418+05:30  INFO 14288 --- [investing-hurdle-api] [main] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring embedded WebApplicationContext
+2026-01-01T23:04:46.419+05:30  INFO 14288 --- [investing-hurdle-api] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2190 ms
+2026-01-01T23:04:46.630+05:30 DEBUG 14288 --- [investing-hurdle-api] [main] c.i.api.security.ApiKeyFilter            : Filter 'apiKeyFilter' configured for use
+2026-01-01T23:04:47.448+05:30  INFO 14288 --- [investing-hurdle-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-01-01T23:04:47.569+05:30  INFO 14288 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-01-01T23:04:47.580+05:30  INFO 14288 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Started InvestingHurdleApiApplication in 4.039 seconds (process running for 4.87)
+2026-01-01T23:06:30.553+05:30  INFO 14288 --- [investing-hurdle-api] [http-nio-8080-exec-5] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-01T23:06:30.554+05:30  INFO 14288 --- [investing-hurdle-api] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-01T23:06:30.555+05:30  INFO 14288 --- [investing-hurdle-api] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-01T23:09:11.828+05:30  INFO 14288 --- [investing-hurdle-api] [http-nio-8080-exec-5] logging.HurdleLogger                     : Built column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:09:12.451+05:30  WARN 14288 --- [investing-hurdle-api] [http-nio-8080-exec-5] logging.HurdleLogger                     : Failed to read header preview: -1
+2026-01-01T23:12:39.327+05:30  INFO 34100 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Starting InvestingHurdleApiApplication using Java 21.0.2 with PID 34100 (C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle\spring-api\target\classes started by Ajay.Gupt in C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle)
+2026-01-01T23:12:39.329+05:30 DEBUG 34100 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Running with Spring Boot v3.2.1, Spring v6.1.2
+2026-01-01T23:12:39.330+05:30  INFO 34100 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-01-01T23:12:41.241+05:30  INFO 34100 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-01T23:12:41.253+05:30  INFO 34100 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-01T23:12:41.254+05:30  INFO 34100 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-01T23:12:41.334+05:30  INFO 34100 --- [investing-hurdle-api] [main] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring embedded WebApplicationContext
+2026-01-01T23:12:41.335+05:30  INFO 34100 --- [investing-hurdle-api] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1932 ms
+2026-01-01T23:12:41.500+05:30 DEBUG 34100 --- [investing-hurdle-api] [main] c.i.api.security.ApiKeyFilter            : Filter 'apiKeyFilter' configured for use
+2026-01-01T23:12:42.154+05:30  INFO 34100 --- [investing-hurdle-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-01-01T23:12:42.280+05:30  INFO 34100 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-01-01T23:12:42.293+05:30  INFO 34100 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Started InvestingHurdleApiApplication in 3.701 seconds (process running for 4.605)
+2026-01-01T23:12:56.860+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-01T23:12:56.860+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-01T23:12:56.862+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-01T23:13:30.273+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-2] logging.HurdleLogger                     : Built column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:13:30.777+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-2] logging.HurdleLogger                     : Failed to read header preview: -1
+2026-01-01T23:13:33.229+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Built column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:13:33.230+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Detected broker: Zerodha
+2026-01-01T23:13:33.230+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Detection message: Successfully detected Zerodha format
+2026-01-01T23:13:33.230+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:13:33.803+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Reading from sheet: Tradewise Exits from 2024-04-01 (index 0)
+2026-01-01T23:13:33.804+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Initializing Flexible Equity Loader...
+2026-01-01T23:13:33.862+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:13:33.863+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:13:33.863+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:13:33.896+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:13:33.896+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:13:33.896+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:13:33.899+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:13:33.899+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:13:33.899+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:13:33.899+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:13:33.899+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:13:33.899+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:13:33.899+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:13:33.899+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:13:33.899+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:13:33.900+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:13:33.900+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:13:33.900+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:13:33.900+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:13:33.900+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:13:33.900+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:13:33.900+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:13:33.901+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:13:33.901+05:30  WARN 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:13:33.901+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Processed 2849 transaction rows
+2026-01-01T23:13:33.903+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : STCG: Buy=1.1062193341299994E7, Sell=1.1195828053100009E7, Total=133634.7118000146
+2026-01-01T23:13:33.903+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : LTCG: Buy=458536.2000000002, Sell=737951.7499999999, Total=279415.5499999997
+2026-01-01T23:13:33.904+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Intraday: Buy=2.4515082030000012E7, Sell=2.4491233610000055E7, Turnover=223055.14000000028
+2026-01-01T23:13:33.904+05:30  INFO 34100 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Flexible equity loader initialized successfully
+2026-01-01T23:19:15.064+05:30  INFO 7304 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Starting InvestingHurdleApiApplication using Java 21.0.2 with PID 7304 (C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle\spring-api\target\classes started by Ajay.Gupt in C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle)
+2026-01-01T23:19:15.066+05:30 DEBUG 7304 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Running with Spring Boot v3.2.1, Spring v6.1.2
+2026-01-01T23:19:15.067+05:30  INFO 7304 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-01-01T23:19:17.152+05:30  INFO 7304 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-01T23:19:17.169+05:30  INFO 7304 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-01T23:19:17.169+05:30  INFO 7304 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-01T23:19:17.293+05:30  INFO 7304 --- [investing-hurdle-api] [main] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring embedded WebApplicationContext
+2026-01-01T23:19:17.294+05:30  INFO 7304 --- [investing-hurdle-api] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2149 ms
+2026-01-01T23:19:17.495+05:30 DEBUG 7304 --- [investing-hurdle-api] [main] c.i.api.security.ApiKeyFilter            : Filter 'apiKeyFilter' configured for use
+2026-01-01T23:19:18.246+05:30  INFO 7304 --- [investing-hurdle-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-01-01T23:19:18.386+05:30  INFO 7304 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-01-01T23:19:18.403+05:30  INFO 7304 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Started InvestingHurdleApiApplication in 4.021 seconds (process running for 4.878)
+2026-01-01T23:19:54.309+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-01T23:19:54.310+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-01T23:19:54.311+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-01-01T23:19:55.952+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-1] logging.HurdleLogger                     : Built column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:19:56.441+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-1] logging.HurdleLogger                     : Failed to read header preview: -1
+2026-01-01T23:20:08.901+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Built column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:20:08.902+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Detected broker: Zerodha
+2026-01-01T23:20:08.902+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Detection message: Successfully detected Zerodha format
+2026-01-01T23:20:08.903+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:20:09.403+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Reading from sheet: Tradewise Exits from 2024-04-01 (index 0)
+2026-01-01T23:20:09.404+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Initializing Flexible Equity Loader...
+2026-01-01T23:20:09.456+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:20:09.458+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:20:09.458+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:20:09.483+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:20:09.483+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:20:09.483+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:20:09.486+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:20:09.487+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:20:09.487+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:20:09.487+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:20:09.487+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:20:09.487+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:20:09.487+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:20:09.487+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:20:09.487+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:20:09.487+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Processed 2849 transaction rows
+2026-01-01T23:20:09.490+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : STCG: Buy=1.1062193341299994E7, Sell=1.1195828053100009E7, Total=133634.7118000146
+2026-01-01T23:20:09.490+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : LTCG: Buy=458536.2000000002, Sell=737951.7499999999, Total=279415.5499999997
+2026-01-01T23:20:09.490+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Intraday: Buy=2.4515082030000012E7, Sell=2.4491233610000055E7, Turnover=223055.14000000028
+2026-01-01T23:20:09.490+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-3] logging.HurdleLogger                     : Flexible equity loader initialized successfully
+2026-01-01T23:21:18.963+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Built column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:21:18.965+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Detected broker: Zerodha
+2026-01-01T23:21:18.965+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Detection message: Successfully detected Zerodha format
+2026-01-01T23:21:18.966+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:21:19.742+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Reading from sheet: Tradewise Exits from 2024-04-01 (index 0)
+2026-01-01T23:21:19.742+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Initializing Flexible Equity Loader...
+2026-01-01T23:21:19.786+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:21:19.787+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:21:19.787+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:21:19.825+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:21:19.825+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:21:19.825+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:21:19.829+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:21:19.829+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:21:19.830+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:21:19.830+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:21:19.830+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:21:19.830+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:21:19.830+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:21:19.830+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:21:19.830+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:21:19.831+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:21:19.831+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:21:19.831+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:21:19.832+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:21:19.832+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:21:19.832+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:21:19.832+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:21:19.832+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:21:19.832+05:30  WARN 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:21:19.832+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Processed 2849 transaction rows
+2026-01-01T23:21:19.833+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : STCG: Buy=1.1062193341299994E7, Sell=1.1195828053100009E7, Total=133634.7118000146
+2026-01-01T23:21:19.833+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : LTCG: Buy=458536.2000000002, Sell=737951.7499999999, Total=279415.5499999997
+2026-01-01T23:21:19.833+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Intraday: Buy=2.4515082030000012E7, Sell=2.4491233610000055E7, Turnover=223055.14000000028
+2026-01-01T23:21:19.833+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Flexible equity loader initialized successfully
+2026-01-01T23:21:19.852+05:30  INFO 7304 --- [investing-hurdle-api] [http-nio-8080-exec-4] logging.HurdleLogger                     : Exporting Excel summary to: C:\Users\AJAY~1.GUP\AppData\Local\Temp\tax-summary-11194424668215735850.xlsx
+2026-01-01T23:37:13.638+05:30  INFO 30192 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Starting InvestingHurdleApiApplication using Java 21.0.2 with PID 30192 (C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle\spring-api\target\classes started by Ajay.Gupt in C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle)
+2026-01-01T23:37:13.640+05:30 DEBUG 30192 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Running with Spring Boot v3.2.1, Spring v6.1.2
+2026-01-01T23:37:13.641+05:30  INFO 30192 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-01-01T23:37:16.025+05:30  INFO 30192 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-01T23:37:16.044+05:30  INFO 30192 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-01T23:37:16.045+05:30  INFO 30192 --- [investing-hurdle-api] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2026-01-01T23:37:16.153+05:30  INFO 30192 --- [investing-hurdle-api] [main] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring embedded WebApplicationContext
+2026-01-01T23:37:16.153+05:30  INFO 30192 --- [investing-hurdle-api] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2437 ms
+2026-01-01T23:37:16.334+05:30 DEBUG 30192 --- [investing-hurdle-api] [main] c.i.api.security.ApiKeyFilter            : Filter 'apiKeyFilter' configured for use
+2026-01-01T23:37:17.029+05:30  INFO 30192 --- [investing-hurdle-api] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-01-01T23:37:17.176+05:30  INFO 30192 --- [investing-hurdle-api] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api/v1'
+2026-01-01T23:37:17.191+05:30  INFO 30192 --- [investing-hurdle-api] [main] c.i.api.InvestingHurdleApiApplication    : Started InvestingHurdleApiApplication in 4.457 seconds (process running for 5.484)
+2026-01-01T23:37:17.264+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-01T23:37:17.264+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-01T23:37:17.266+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-01T23:38:23.818+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-5] logging.HurdleLogger                     : Built column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:38:24.372+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-5] logging.HurdleLogger                     : Failed to read header preview: -1
+2026-01-01T23:38:32.097+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Built column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:38:32.098+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Detected broker: Zerodha
+2026-01-01T23:38:32.098+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Detection message: Successfully detected Zerodha format
+2026-01-01T23:38:32.098+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Column mapping: ColumnMapping{brokerType=ZERODHA, sheetIndex=0, dataStartRow=24, dataEndRow=2916}
+2026-01-01T23:38:32.583+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Reading from sheet: Tradewise Exits from 2024-04-01 (index 0)
+2026-01-01T23:38:32.583+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Initializing Flexible Equity Loader...
+2026-01-01T23:38:32.639+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:38:32.639+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:38:32.640+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:38:32.682+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:38:32.682+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:38:32.682+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:38:32.684+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Period of Holding"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Buy Value"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Sell Value"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:38:32.685+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:38:32.686+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:38:32.686+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:38:32.686+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:38:32.686+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 9: For input string: "Brokerage"
+2026-01-01T23:38:32.686+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 6: For input string: "Sell Value"
+2026-01-01T23:38:32.686+05:30  WARN 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Error reading cell at column 7: For input string: "Profit"
+2026-01-01T23:38:32.687+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Processed 2849 transaction rows
+2026-01-01T23:38:32.689+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : STCG: Buy=1.1062193341299994E7, Sell=1.1195828053100009E7, Total=133634.7118000146
+2026-01-01T23:38:32.689+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : LTCG: Buy=458536.2000000002, Sell=737951.7499999999, Total=279415.5499999997
+2026-01-01T23:38:32.690+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Intraday: Buy=2.4515082030000012E7, Sell=2.4491233610000055E7, Turnover=223055.14000000028
+2026-01-01T23:38:32.690+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Flexible equity loader initialized successfully

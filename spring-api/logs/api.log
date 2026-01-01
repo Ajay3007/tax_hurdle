@@ -1415,3 +1415,4 @@
 2026-01-01T14:59:22.123+05:30  INFO 29184 --- [investing-hurdle-api] [http-nio-8080-exec-1] logging.HurdleLogger                     : Intraday: Buy=645026.56, Sell=641590.3, Turnover=4217.259999999995
 2026-01-01T14:59:22.123+05:30  INFO 29184 --- [investing-hurdle-api] [http-nio-8080-exec-1] logging.HurdleLogger                     : Flexible equity loader initialized successfully
 2026-01-01T14:59:22.153+05:30  INFO 29184 --- [investing-hurdle-api] [http-nio-8080-exec-1] logging.HurdleLogger                     : Exporting Excel summary to: C:\Users\AJAY~1.GUP\AppData\Local\Temp\tax-summary-7650297588817748564.xlsx
+2026-01-01T15:09:54.148+05:30  INFO 29184 --- [investing-hurdle-api] [http-nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 817 ms
