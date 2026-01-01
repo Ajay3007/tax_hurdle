@@ -112,6 +112,26 @@ mvn javafx:run
 
 Features: upload Excel files, auto-detect broker, calculate taxes, view results, export to Excel, light/dark theme, configurable settings.
 
+## 🖼️ UI Screenshots
+
+![Upload screen with drag/drop and broker detection](docs/images/ui-upload.png)
+
+![Results screen with summary, pie chart, and quarter charts](docs/images/ui-results.png)
+
+![Settings screen with API base URL and test connection](docs/images/ui-settings.png)
+
+![Results with summary](docs/images/ui-results-top.png)
+
+![Results with STCG Breakdown Chart](docs/images/ui-results-stcg.png)
+
+![Results with STCG Breakdown Chart](docs/images/ui-results-ltcg.png)
+
+![Results with Speculative Breakdown Chart](docs/images/ui-results-intra.png)
+
+![Export confirmation](docs/images/ui-export.png)
+
+Images are stored under [docs/images](docs/images). If the placeholders above do not render, add PNGs with the matching filenames (see [docs/images/README.md](docs/images/README.md)).
+
 Key endpoints:
 - `POST /calculations/detect-broker` (multipart file) — returns broker type, column mapping, and header preview.
 - `POST /calculations/calculate` — returns JSON with STCG/LTCG/speculation and quarterly breakdowns (quarter scheme defaults to STANDARD_Q4).
