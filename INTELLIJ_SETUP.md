@@ -21,7 +21,7 @@
 
 1. Launch **IntelliJ IDEA**
 2. Click **File** → **Open**
-3. Navigate to and select the root folder: `C:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle`
+3. Navigate to and select the root folder: `<PROJECT_ROOT>`
 4. Click **OK**
 5. Wait for IntelliJ to import the Maven project (you'll see a progress indicator in the bottom-right)
 

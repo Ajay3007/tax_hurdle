@@ -32,27 +32,28 @@ mvn spring-boot:run
 # or
 java -jar target/spring-api-*.jar
 ```
-- App URL: http://localhost:8080
-- Swagger UI: http://localhost:8080/swagger-ui/index.html
-- Useful endpoints:
-  - `POST /calculations/detect-broker` (multipart file) — verify broker mapping
-  - `POST /calculations/calculate` — JSON result
-  - `POST /calculations/export` — download Excel summary
-  - `GET /calculations/config` — runtime defaults (default FY, quarter scheme, upload dir, supported brokers)
-  - `GET /calculations/health` — liveness
+- Base URL (context path): http://localhost:8080/api/v1
+- Swagger UI: http://localhost:8080/api/v1/swagger-ui.html
+- Useful endpoints (all prefixed with `/api/v1`):
+  - `POST /api/v1/calculations/detect-broker` — verify broker mapping (multipart file field `file`)
+  - `POST /api/v1/calculations/upload` — JSON result (calc + persist recent list)
+  - `POST /api/v1/calculations/export` — download Excel summary
+  - `GET /api/v1/calculations/config` — runtime defaults (default FY, quarter scheme, upload dir, supported brokers)
+  - `GET /api/v1/calculations/recent` — last 10 calculation summaries
+  - `GET /api/v1/calculations/health` — liveness
 
 ## Run via CLI (curl examples)
 Detect broker:
 ```bash
 curl -F "file=@path/to/your.xlsx" \
-  http://localhost:8080/calculations/detect-broker
+  http://localhost:8080/api/v1/calculations/detect-broker
 ```
 Calculate (with explicit params):
 ```bash
 curl -F "file=@path/to/your.xlsx" \
   -F "financial_year=FY 2024-25" \
   -F "quarter_scheme=STANDARD_Q4" \
-  http://localhost:8080/calculations/calculate
+  http://localhost:8080/api/v1/calculations/upload
 ```
 Export Excel summary:
 ```bash
@@ -60,7 +61,7 @@ curl -o summary.xlsx \
   -F "file=@path/to/your.xlsx" \
   -F "financial_year=FY 2024-25" \
   -F "quarter_scheme=STANDARD_Q4" \
-  http://localhost:8080/calculations/export
+  http://localhost:8080/api/v1/calculations/export
 ```
 
 ## Typical Workflow
@@ -86,6 +87,6 @@ curl -o summary.xlsx \
 4) Build: use the Maven tool window → Lifecycle → `clean` then `package` (or run gutter icon on `pom.xml`).
 5) Run app:
   - Via Maven tool window: Plugins → `spring-boot` → `spring-boot:run`, **or**
-  - Create Run Configuration: Add “Spring Boot” or “Application”, main class `com.investinghurdle.api.ApiApplication` (or the main class defined in this project), classpath from Maven, VM options as needed, Program args empty.
-6) Swagger UI: http://localhost:8080/swagger-ui/index.html (same endpoints as above).
+  - Create Run Configuration: Add “Spring Boot” or “Application”, main class `com.investinghurdle.api.InvestingHurdleApiApplication`, classpath from Maven, VM options as needed, Program args empty.
+6) Swagger UI: http://localhost:8080/api/v1/swagger-ui.html (same endpoints as above, all under `/api/v1`).
 7) CLI still works while IntelliJ run config is active.

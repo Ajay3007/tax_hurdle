@@ -151,6 +151,22 @@ java -cp "bin:lib/*" bootstrap.InvestingHurdleBootstrapper
 
 Uses the Excel at `configuration/tax_2122_.xlsx` and the hardcoded column indices/dates in the legacy loader.
 
+**Command-line options (legacy console)**
+- `--config-props <path>`: properties file for configuration
+- `--tax-file <path>`: alternate tax workbook (.xlsx)
+- `--financial-year <fy>`: e.g., "FY 2022-23"
+- `--output-dir <path>`: output directory for reports
+- `--log-level <level>`: DEBUG/INFO/WARN/ERROR
+
+Example:
+```
+java -cp "bin:lib/*" bootstrap.InvestingHurdleBootstrapper \
+    --tax-file ./configuration/tax_2223_.xlsx \
+    --financial-year "FY 2022-23" \
+    --output-dir ./output/fy2223 \
+    --log-level DEBUG
+```
+
 ## 📊 Expected Output
 
 ```

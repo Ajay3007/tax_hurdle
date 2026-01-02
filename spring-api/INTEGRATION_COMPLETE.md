@@ -105,7 +105,7 @@ StcgResponse stcg = new StcgResponse(
 
 ```powershell
 # Prepare test file
-$filePath = "c:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle\configuration\tax_2122_.xlsx"
+$filePath = "<PROJECT_ROOT>\configuration\tax_2122_.xlsx"
 
 # Create multipart form
 $uri = "http://localhost:8080/api/v1/calculations/upload?financial_year=FY 2021-22"
@@ -171,7 +171,7 @@ Invoke-RestMethod -Uri $uri -Method POST -InFile $filePath -ContentType "multipa
 
 1. **Compare with Command-Line**
    ```powershell
-   cd c:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle
+   cd <PROJECT_ROOT>
    java -cp "bin;lib/*" bootstrap.InvestingHurdleBootstrapper
    ```
 

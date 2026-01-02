@@ -67,7 +67,7 @@ FlexibleEquityLoader
 
 **Detect Upstox File:**
 ```powershell
-$file = "c:\Users\Ajay.Gupt\OneDrive - Reliance Corporate IT Park Limited\Documents\csp\tax_hurdle\configuration\tax_2122_.xlsx"
+$file = "<PROJECT_ROOT>\configuration\tax_2122_.xlsx"
 
 # PowerShell multipart upload
 $form = @{

@@ -235,3 +235,4 @@
 2026-01-01T23:38:32.689+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : LTCG: Buy=458536.2000000002, Sell=737951.7499999999, Total=279415.5499999997
 2026-01-01T23:38:32.690+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Intraday: Buy=2.4515082030000012E7, Sell=2.4491233610000055E7, Turnover=223055.14000000028
 2026-01-01T23:38:32.690+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-7] logging.HurdleLogger                     : Flexible equity loader initialized successfully
+2026-01-01T23:55:03.765+05:30  INFO 30192 --- [investing-hurdle-api] [http-nio-8080-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 476 ms
